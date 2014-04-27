@@ -17,6 +17,7 @@ BuildRequires:	pkgconfig(edje)
 BuildRequires:	pkgconfig(efreet)
 BuildRequires:	pkgconfig(evas)
 BuildRequires:	pkgconfig(elementary)
+BuildRequires:	cmake
 
 %description
 This is a text editor.
