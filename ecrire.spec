@@ -1,14 +1,14 @@
-%define git	20140129
+%define git	20150504
 
 Epoch:	1
 Summary: 	Enlightened text editor
 Name: 		ecrire
 Version:	0.1.0
-Release:	1.%{git}.1
+Release:	1.%{git}.2
 License:	BSD
 Group:		Video
 URL:		http://www.enlightenment.org/
-Source0:	%{name}-%{git}.tar.xz
+Source0:	%{name}-%{git}.tar.gz
 
 BuildRequires:	pkgconfig(eet)
 BuildRequires:	pkgconfig(eina)
