@@ -9,7 +9,7 @@ License:	BSD
 Group:		Video
 URL:		http://www.enlightenment.org/
 Source0:	%{name}-%{git}.tar.xz
-
+Source100:	ecrire.rpmlintrc
 BuildRequires:	pkgconfig(eet)
 BuildRequires:	pkgconfig(eina)
 BuildRequires:	pkgconfig(ecore)
