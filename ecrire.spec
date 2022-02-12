@@ -8,6 +8,7 @@ URL:		http://www.enlightenment.org/
 Source0:	https://download.enlightenment.org/rel/apps/ecrire/%{name}-%{version}.tar.xz
 
 BuildRequires:	pkgconfig(efl)
+BuildRequires:  gettext-devel
 BuildRequires:	cmake
 BuildRequires:  meson
 
@@ -32,6 +33,10 @@ With the exception that ecrire should be usable on desktop as well as mobile dev
 
 %files -f %{name}.lang
 %doc AUTHORS README NEWS TODO
-#{_bindir}/*
-#{_datadir}/applications/*.desktop
-#{_iconsdir}/%name.png
+%{_bindir}/ecrire
+%{_datadir}/applications/ecrire.desktop
+%{_iconsdir}/hicolor/*x*/apps/ecrire.png
+%{_iconsdir}/hicolor/scalable/apps/ecrire.svg
+%{_datadir}/icons/ecrire.*
+%exclude %{_datadir}/ecrire/AUTHORS
+%exclude %{_datadir}/ecrire/COPYING
