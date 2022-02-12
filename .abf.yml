@@ -1,5 +1,2 @@
-removed_sources:
-  ecrire-20140129.tar.xz: b7aac89b9b748b4ae73d41df88b5148bfbf233e4
-  ecrire-20150504.tar.gz: f8aacb4818212c7720d6c773499bd482e3a58a58
 sources:
-  ecrire-20150504.tar.gz: 4f69ab6cd54495b8dd220b1aca93cef86cb7d31c
+  ecrire-0.2.0.tar.xz: 606dccd9900340cd2f140919fc8800515ca1dbfa
