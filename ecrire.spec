@@ -1,44 +1,37 @@
-%define git	20150504
-
-Epoch:	1
-Summary: 	Enlightened text editor
+Summary: 	Enlightenment text editor
 Name: 		ecrire
-Version:	0.1.0
-Release:	1.%{git}.2
+Version:	0.2.0
+Release:	1
 License:	BSD
-Group:		Video
+Group:		Editors/Enlightenment
 URL:		http://www.enlightenment.org/
-Source0:	%{name}-%{git}.tar.gz
+Source0:	https://download.enlightenment.org/rel/apps/ecrire/%{name}-%{version}.tar.xz
 
-BuildRequires:	pkgconfig(eet)
-BuildRequires:	pkgconfig(eina)
-BuildRequires:	pkgconfig(ecore)
-BuildRequires:	pkgconfig(edje)
-BuildRequires:	pkgconfig(efreet)
-BuildRequires:	pkgconfig(evas)
-BuildRequires:	pkgconfig(elementary)
+BuildRequires:	pkgconfig(efl)
 BuildRequires:	cmake
+BuildRequires:  meson
 
 %description
 This is a text editor.
 
-This is a WORK IN PROGRESS - it is NOT COMPLETE. do not expect everything to
-work and do what you want.
+Ecrire is a basic text editor written in EFL for the Enlightenment desktop environment. 
+It is intended to be a native EFL alternative to gedit (GTK/Gnome), kwrite (KDE/Plasma), and similar basic text editors. 
+With the exception that ecrire should be usable on desktop as well as mobile devices.
 
 %prep
-%setup -qn %{name}-%{git}
+%autosetup -p1
 
 %build
-%cmake
-%make
+%meson
+%meson_build
 
 %install
-%makeinstall_std -C build
+%meson_install
 
 %find_lang %{name}
 
 %files -f %{name}.lang
-%doc AUTHORS README ChangeLog NEWS TODO
-%{_bindir}/*
-%{_datadir}/applications/*.desktop
-%{_iconsdir}/%name.png
+%doc AUTHORS README NEWS TODO
+#{_bindir}/*
+#{_datadir}/applications/*.desktop
+#{_iconsdir}/%name.png
