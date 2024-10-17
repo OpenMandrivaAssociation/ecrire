@@ -4,7 +4,7 @@ Version:	0.2.0
 Release:	1
 License:	BSD
 Group:		Editors/Enlightenment
-URL:		http://www.enlightenment.org/
+URL:		https://www.enlightenment.org/
 Source0:	https://download.enlightenment.org/rel/apps/ecrire/%{name}-%{version}.tar.xz
 
 BuildRequires:	pkgconfig(efl)
